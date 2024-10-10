@@ -69,7 +69,7 @@ exports.login = async(req,res) => {
         (err, token) => {
             if (err) throw err;
             console.log(err);
-            res.json({ user, token: token, msg: "OTP Sent Successfully" });
+            res.json({ user, token: token, msg: `OTP Sent Successfully ${otp}` });
         }
     );
 
